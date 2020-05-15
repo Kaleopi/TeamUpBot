@@ -1,0 +1,20 @@
+{
+  "name": "teamupbot",
+  "version": "1.0.0",
+  "description": "Bot discord",
+  "main": "app.js",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kaleopi"
+  },
+  "author": "Thomas Gigout @Kaleopi PommePomme#2537",
+  "license": "MIT"
+}
