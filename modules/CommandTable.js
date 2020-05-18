@@ -1,9 +1,9 @@
-// const Help = require('./commands/Help');
+const Help = require('./commands/Help');
 
 const CommandTable = new Map(
     [
-        ["help", "test"]
-        // ["help", Help.HelpCommand]
+        ["help", Help.HelpCommand],
+        ["h", Help.HelpCommand],
     ]
 );
 

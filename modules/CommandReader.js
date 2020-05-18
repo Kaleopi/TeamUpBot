@@ -4,7 +4,6 @@ const CommandTable = require('./CommandTable');
 
 class CommandReader {
     constructor() {
-        this.var = "ok";
     }
 
     /**
@@ -15,9 +14,11 @@ class CommandReader {
     async handleMessage(message, client) {
         let prefix = CommandReader.getPrefix(message);
         if (prefix == Config.PREFIX) {
-            launchCommand(message, client);
-        } else {
-            console.log('prefix pas ok');
+            try{
+                launchCommand(message, client);
+            }catch{
+                console.log("error launch");
+            }
         }
     }
 
@@ -51,8 +52,13 @@ function launchCommand(message, client) {
     let command = CommandReader.getCommand(message);
     let args = CommandReader.getArgs(message);
     if(CommandTable.has(command)){
-        ct = CommandTable.get(command);
-        message.channel.send(ct);
+        if (!message.channel.permissionsFor(client.user).serialize().SEND_MESSAGES) { //test if the bot can speak in the channel where a command has been read
+            message.author.send("no speak permissions");
+        } else {
+            CommandTable.get(command)(message);
+        }
+    }else{
+        message.channel.send("**Je ne reconnais pas cette commande...**");
     }
 }
 

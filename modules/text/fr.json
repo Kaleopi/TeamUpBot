@@ -1,0 +1,11 @@
+{
+    "commands":{
+        "help":{
+            "intro":":notebook_with_decorative_cover: **",
+            "main":" voici la liste des commandes disponibles : **"
+        },
+        "test":{
+            "main":"juste un test"
+        }
+    }
+}
