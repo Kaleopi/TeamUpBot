@@ -8,7 +8,7 @@ let commandReader = new CommandReader();
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! v.${Config.VERSION}`);
-    client.user.setActivity('Getting developed',{type: 'WATCHING'})
+    client.user.setActivity('discord.gg/T2vM2Tu',{type: 'WATCHING'})
     .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
     .catch(console.error);
     // client.user.setAvatar('./assets/logo.jpg')
