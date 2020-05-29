@@ -1,3 +1,6 @@
+const website = require('./website/bin/www');
+website();
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
