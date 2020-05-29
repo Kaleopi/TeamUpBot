@@ -1,5 +1,5 @@
-const website = require('./website/bin/www');
-website();
+const websiteIndex = require('./website/index.js');
+websiteIndex();
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
